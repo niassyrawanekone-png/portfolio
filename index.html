@@ -1,180 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <!-- Essentiel pour le Responsive Design sur mobile -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Le Portfolio de Rawane</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Rawane Koné Niassy - Développeur Web & IA</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <!-- Essentiel pour le Responsive Design sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Portfolio de Rawane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Rawane Koné Niassy - Développeur Web & IA</h1>
+    </header>
 
-        <nav>
-            <a href="#propos">À propos</a> 
-            <a href="#objectifs">Mes objectifs</a>  
-            <a href="#interets">Centres d'intérêt</a> 
-            <a href="#contact">Me contacter</a>
-        </nav>
+    <nav>
+        <a href="#propos">À propos</a> 
+        <a href="#objectifs">Mes objectifs</a>  
+        <a href="#interets">Centres d'intérêt</a> 
+        <a href="#contact">Me contacter</a>
+    </nav>
 
-        <main>
-            <!-- Introduction de bienvenue -->
-            <section class="intro">
-                <h2>Bienvenue sur mon portfolio</h2>
-                <p>Je suis Rawane Koné Niassy, un étudiant passionné par l'informatique et les nouvelles technologies. Découvrez mon parcours, mes compétences et mes projets à travers ce site.</p>
-                <h2>Projet en cours de test avec IBM</h2>
-                <p>Je suis actuellement en train de tester une solution d'intelligence artificielle développée par IBM dans le cadre de mon projet de fin d'études.</p>
-                <p>Je suis convaincu que cette technologie aura un impact significatif sur le futur de l'informatique et de l'IA.</p>
+    <main>
+        <!-- Introduction Principale : Parcours & Vision -->
+        <section class="intro">
+            <h2>Bienvenue sur mon espace de développement</h2>
+            <p>Je m'appelle <strong>Rawane Koné Niassy</strong>. Découvrez mon parcours académique, mes projets en développement Web & IA, ainsi que mon apprentissage intensif en cybersécurité.</p>
+        </section>
+
+        <!-- Section 1 : Parcours Académique & Formation -->
+        <section id="parcours" class="carte-large">
+            <h2>🎓 Parcours Académique & Formation</h2>
+            <div class="grille-parcours">
+                <div class="bloc-parcours">
+                    <h3>Licence 1 MPCI</h3>
+                    <p class="institution">Université Alioune Diop de Bambey (UADB)</p>
+                    <p>Formation fondamentale axée sur les <strong>Mathématiques, la Physique, la Chimie et l'Informatique</strong>. Ce cursus me permet d'acquérir une rigueur scientifique indispensable pour l'algorithmique et la modélisation.</p>
+                </div>
+                <div class="bloc-parcours">
+                    <h3>Baccalauréat Série S2</h3>
+                    <p class="institution">Enseignement Secondaire - Sénégal</p>
+                    <p>Obtention du baccalauréat scientifique, posant les bases de mon intérêt pour les sciences exactes et les technologies de l'information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 : Les Deux Piliers d'Apprentissage -->
+        <section id="piliers" class="carte-large">
+            <h2>💻 Mes Deux Piliers de Spécialisation</h2>
+            <div class="grille-piliers">
+                <div class="pilier">
+                    <h3>1. Développement Web & Intelligence Artificielle</h3>
+                    <p class="mentorat">Mentorat & Projets pratiques</p>
+                    <ul>
+                        <li><strong>Front-End :</strong> HTML5, CSS3 (Responsive Design), JavaScript dynamique (DOM, API).</li>
+                        <li><strong>Back-End & Logiciel :</strong> Programmation en Python, structures de données, algorithmique et bases de données.</li>
+                        <li><strong>Workflow Pro :</strong> Versioning avancé avec Git & GitHub (Gestion de branches, Pull Requests, déploiement).</li>
+                    </ul>
+                </div>
+                <div class="pilier">
+                    <h3>2. Cybersécurité, Réseaux & Systèmes</h3>
+                    <p class="mentorat">Formation théorique & pratique</p>
+                    <ul>
+                        <li><strong>Systèmes :</strong> Administration Linux / Windows, scripting shell et architecture système.</li>
+                        <li><strong>Réseaux & Sécurité :</strong> Concepts fondamentaux de la sécurité informatique, protocoles réseaux et analyse de vulnérabilités.</li>
+                        <li><strong>Auto-formation :</strong> Résolution de challenges et apprentissage continu des bonnes pratiques de sécurisation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grille de cartes pour le reste du contenu -->
+        <div class="conteneur-cartes">
+
+            <section class="carte">
+                <h2>Citation du jour</h2>
+                <p id="texte-citation">Chargement de la citation...</p>
+                <p id="auteur-citation" style="font-style: italic; color: #7f8c8d;"></p>
+                <button id="btn-citation">Nouvelle citation</button>
             </section>
 
-            <!-- Grille de cartes en 2 colonnes -->
-            <div class="conteneur-cartes">
+            <section id="propos" class="carte">
+                <h2>🚀 Ambition & À propos de moi</h2>
+                <p class="texte-mise-en-avant">
+                    Je m'appelle <strong>Rawane Koné Niassy</strong>, étudiant en première année de Licence MPCI à l'Université Alioune Diop de Bambey (UADB).<br><br>
+                    Mon objectif ultime est de devenir <strong>Ingénieur en Informatique</strong> spécialisé dans les systèmes intelligents et la sécurité du Web.<br><br>
+                    Passionné par la programmation (notamment en Python), l'analyse de données et les outils d'IA, je crois fermement que la persévérance et l'apprentissage continu sont les clés de la réussite.
+                </p>
+            </section>
 
-                <section class="carte">
-                    <h2>Citation du jour</h2>
-                    <p id="texte-citation">Chargement de la citation...</p>
-                    <p id="auteur-citation" style="font-style: italic; color: #7f8c8d;"></p>
-                    <button id="btn-citation">Nouvelle citation</button>
-                </section>
+            <section id="objectifs" class="carte">
+                <h2>Mes objectifs & Compétences</h2>
+                <p>Pour en savoir plus sur mon langage préféré, vous pouvez <a href="https://www.python.org" target="_blank">visiter le site officiel de Python</a>.</p>
+                
+                <h3>Compétences acquises :</h3>
+                <ul id="liste-dynamique"></ul>
 
-                <section id="propos" class="carte">
-                    <h2>À propos de moi</h2>
-                    <p class="texte-mise-en-avant">
-                        Je m'appelle Rawane Koné Niassy.<br>
-                        Je suis un étudiant sénégalais en première année de Licence MPCI à l'Université Alioune Diop de Bambey (UADB).<br>
-                        Passionné par les nouvelles technologies, je rêve de devenir ingénieur en informatique et de créer un jour ma propre entreprise spécialisée dans l'intelligence artificielle.<br><br>
-                        
-                        Je suis une personne ambitieuse qui cherche constamment à apprendre et à progresser.<br>
-                        Malgré les difficultés, je continue de travailler pour développer mes compétences en programmation, notamment en Python, ainsi que dans les domaines de l'analyse de données et du développement d'applications.<br>
-                        En parallèle, j'améliore également mon niveau d'anglais afin d'augmenter mes opportunités professionnelles.<br><br>
-                        
-                        J'aime relever de nouveaux défis, qu'il s'agisse de projets informatiques, de trouver des moyens de financer mes études ou de découvrir des opportunités de travail à distance.<br>
-                        Je m'intéresse aussi aux jeux vidéo, aux nouvelles technologies et aux outils d'intelligence artificielle.<br><br>
-                        
-                        Mon objectif est de bâtir une carrière solide, d'avoir un impact grâce à la technologie et d'offrir une vie meilleure à ma famille.<br>
-                        Je crois que la persévérance, l'apprentissage continu et le travail sont les clés pour transformer mes rêves en réalité.
-                    </p>
-                </section>
+                <h3>Mes Projets à venir :</h3>
+                <ul id="liste-projets"></ul>
 
-                <section id="objectifs" class="carte">
-                    <h2>Mes objectifs & Compétences</h2>
-                    <p>Pour en savoir plus sur mon langage préféré, vous pouvez <a href="https://www.python.org" target="_blank">visiter le site officiel de Python</a>.</p>
-                    <ul>
-                        <li>Maîtriser le Front-End</li>
-                        <li>Faire du Back-End</li>
-                        <li>Comprendre les bases de données</li>
-                    </ul>
+                <table>
+                    <tr>
+                        <th>Technologie</th>
+                        <th>Niveau Actuel</th>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Intermédiaire</td>
+                    </tr>
+                    <tr>
+                        <td>HTML / CSS</td>
+                        <td>Acquis</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>En cours d'apprentissage</td>
+                    </tr>
+                </table>
+            </section>
 
-                    <!-- Tes compétences dynamiques -->
-                    <ul id="liste-dynamique"></ul>
+            <section id="projets-section" class="carte">
+                <h2>Mes Projets Web & IA</h2>
+                <p>Clique sur le bouton d'un projet pour le mettre en favori :</p>
+                <div id="conteneur-projets"></div>
+            </section>
 
-                    <h3>Mes Projets à venir :</h3>
-                    <ul id="liste-projets"></ul>
+            <section id="dev-section" class="carte">
+                <h2>Développeurs de l'Équipe</h2>
+                <p>Clique sur le bouton pour charger un membre de l'équipe :</p>
+                <button id="btn-charger-dev">Charger un membre</button>
+                <div id="profil-dev" style="margin-top: 15px;"></div>
+            </section>
 
-                    <table>
-                        <tr>
-                            <th>Technologie</th>
-                            <th>Niveau Actuel</th>
-                        </tr>
-                        <tr>
-                            <td>Python</td>
-                            <td>Intermédiaire</td>
-                        </tr>
-                        <tr>
-                            <td>HTML</td>
-                            <td>Acquis (Semaine 1 terminée !)</td>
-                        </tr>
-                        <tr>
-                            <td>CSS</td>
-                            <td>Acquis (Semaine 2 terminée !)</td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>En cours d'apprentissage</td>
-                        </tr>
-                    </table>
-                </section>
-
-                <section id="projets-section" class="carte">
-                    <h2>Mes Projets Web & IA</h2>
-                    <p>Clique sur le bouton d'un projet pour le mettre en favori (sauvegardé automatiquement) :</p>
-                    
-                    <!-- Zone où JavaScript va injecter les cartes de projets -->
-                    <div id="conteneur-projets"></div>
-                </section>
-
-                <section id="dev-section" class="carte">
-                    <h2>Développeurs de l'Équipe</h2>
-                    <p>Clique sur le bouton pour charger un membre de l'équipe :</p>
-    
-                    <button id="btn-charger-dev">Charger un membre</button>
-    
-                    <!-- Zone d'affichage du profil -->
-                    <div id="profil-dev" style="margin-top: 15px;"></div>
-                </section>
-
-                <section id="interets" class="carte">
-                    <h2>Mes centres d'intérêt</h2>
-                    <p>Ce qui me passionne au quotidien en dehors des cours :</p>
-
-                    <div class="grille-interets">
-                        <div class="item-interet">
-                            <span>🎮</span>
-                            <h3>Jeux Vidéo & Stratégie</h3>
-                            <p>E-Football, jeux de stratégie mobile et univers sandbox.</p>
-                        </div>
-
-                        <div class="item-interet">
-                            <span>📚</span>
-                            <h3>Manga & Animation</h3>
-                            <p>Lecture et visionnage d'animes shōnen et histoires captivantes.</p>
-                        </div>
-
-                        <div class="item-interet">
-                            <span>⚽</span>
-                            <h3>Football International</h3>
-                            <p>Passionné par les grands championnats et les grandes équipes européennes.</p>
-                        </div>
-
-                        <div class="item-interet">
-                            <span>🤖</span>
-                            <h3>Tech & Intelligence Artificielle</h3>
-                            <p>Test et découverte des nouveaux outils d'IA et d'automatisation.</p>
-                        </div>
+            <section id="interets" class="carte">
+                <h2>Mes centres d'intérêt</h2>
+                <div class="grille-interets">
+                    <div class="item-interet">
+                        <span>🎮</span>
+                        <h3>Jeux Vidéo & Stratégie</h3>
+                        <p>E-Football, jeux de stratégie mobile et univers sandbox.</p>
                     </div>
-                </section>
+                    <div class="item-interet">
+                        <span>📚</span>
+                        <h3>Manga & Animation</h3>
+                        <p>Lecture et visionnage d'animes shōnen.</p>
+                    </div>
+                    <div class="item-interet">
+                        <span>⚽</span>
+                        <h3>Football International</h3>
+                        <p>Passionné par les grands championnats européens.</p>
+                    </div>
+                    <div class="item-interet">
+                        <span>🤖</span>
+                        <h3>Tech & IA</h3>
+                        <p>Découverte des nouveaux outils d'IA et d'automatisation.</p>
+                    </div>
+                </div>
+            </section>
 
-                <section id="contact" class="carte">
-                    <h2>Me contacter</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="nom">Ton prénom :</label>
-                            <input type="text" id="nom" name="nom" placeholder="Ex: Rawane">
-                        </div>
+            <section id="contact" class="carte">
+                <h2>Me contacter</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="nom">Ton prénom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Ex: Rawane">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="email">Ton Email :</label>
-                            <input type="email" id="email" name="email" placeholder="Ex: exemple@email.com">
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Ton Email :</label>
+                        <input type="email" id="email" name="email" placeholder="Ex: exemple@email.com">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="message">Message :</label>
-                            <textarea id="message" name="message" placeholder="Ton message ici..."></textarea>
-                        </div>
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" placeholder="Ton message ici..."></textarea>
+                    </div>
 
-                        <input type="submit" value="Envoyer">
-                    </form>
-                </section>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </section>
 
-            </div> <!-- Fin du conteneur-cartes -->
-        </main>
+        </div> <!-- Fin du conteneur-cartes -->
+    </main>
 
-        <footer>
-            <p>&copy; 2026 Rawane Koné Niassy - Tous droits réservés.</p>
-        </footer>
+    <footer>
+        <p>&copy; 2026 Rawane Koné Niassy - Tous droits réservés.</p>
+    </footer>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
