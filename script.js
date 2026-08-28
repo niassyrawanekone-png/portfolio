@@ -12,7 +12,7 @@ if (titre) {
             estModifie = true;
         } else {
             titre.textContent = "Rawane Koné Niassy - Développeur Web & IA";
-            titre.style.color = "#2c3e50";
+            titre.style.color = "#051610";
             estModifie = false;
         }
     });
@@ -45,7 +45,7 @@ const competencesTechniques = ["HTML5 / CSS3", "JavaScript Moderne", "Algorithmi
 const listeHTML = document.querySelector("#liste-dynamique");
 
 if (listeHTML) {
-    listeHTML.innerHTML = ""; // Nettoyage de sécurité
+    listeHTML.innerHTML = ""; 
     for (let techno of competencesTechniques) {
         const nouvelElement = document.createElement("li");
         nouvelElement.textContent = techno;
@@ -115,7 +115,9 @@ function afficherProjets() {
 
     for (let projet of mesProjetsComplets) {
         const carte = document.createElement("div");
-        carte.classList.add("carte");
+        carte.style.border = "1px solid #ddd";
+        carte.style.borderRadius = "6px";
+        carte.style.padding = "15px";
         carte.style.marginBottom = "15px";
 
         const estEnFavori = favorisEnregistres.includes(projet.id);
@@ -129,6 +131,8 @@ function afficherProjets() {
         const boutonFavori = document.createElement("button");
         boutonFavori.style.cursor = "pointer";
         boutonFavori.style.padding = "8px 12px";
+        boutonFavori.style.border = "none";
+        boutonFavori.style.borderRadius = "4px";
         boutonFavori.style.marginTop = "10px";
 
         if (estEnFavori) {
@@ -160,10 +164,26 @@ function afficherProjets() {
 afficherProjets();
 
 // ==========================================
-// 7. SEMAINE 6 : REQUÊTE HTTP ASYNCHRONE (API FETCH)
+// 7. CHARGEMENT D'UN MEMBRE D'ÉQUIPE (NOUVEAU)
 // ==========================================
+const btnChargerDev = document.querySelector("#btn-charger-dev");
+const profilDev = document.querySelector("#profil-dev");
 
-// Sélection des éléments HTML de la carte Citation
+if (btnChargerDev && profilDev) {
+    btnChargerDev.addEventListener("click", function() {
+        profilDev.innerHTML = `
+            <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; border-left: 3px solid #27ae60;">
+                <strong>Rawane Koné Niassy</strong><br>
+                <em>Lead Developer & IA Student</em><br>
+                Spécialités : Python, Web Dev, Cybersécurité
+            </div>
+        `;
+    });
+}
+
+// ==========================================
+// 8. REQUÊTE HTTP ASYNCHRONE (API FETCH)
+// ==========================================
 const texteCitation = document.querySelector("#texte-citation");
 const auteurCitation = document.querySelector("#auteur-citation");
 const btnCitation = document.querySelector("#btn-citation");
@@ -171,19 +191,14 @@ const btnCitation = document.querySelector("#btn-citation");
 async function chargerNouvelleCitationAPI() {
     if (!texteCitation || !btnCitation) return;
 
-    // 1. État de chargement (UX)
     btnCitation.disabled = true;
     texteCitation.textContent = "🌐 Connexion au serveur distant...";
     if (auteurCitation) auteurCitation.textContent = "";
 
     try {
-        // 2. Appel de l'API publique
         const reponse = await fetch("https://dummyjson.com/quotes/random");
-
-        // 3. Extraction du JSON
         const citation = await reponse.json();
 
-        // 4. Injection dans le DOM
         texteCitation.textContent = `"${citation.quote}"`;
         if (auteurCitation) auteurCitation.textContent = `- ${citation.author}`;
 
@@ -195,25 +210,8 @@ async function chargerNouvelleCitationAPI() {
     }
 }
 
-// Association de l'événement clic
 if (btnCitation) {
     btnCitation.onclick = chargerNouvelleCitationAPI;
 }
 
-// Chargement automatique au lancement de la page
 chargerNouvelleCitationAPI();
-
-// ==========================================
-// 8. TEST MANUEL DES MÉTHODES JSON
-// ==========================================
-const profilRawane = {
-    nom: "Rawane Koné Niassy",
-    role: "Développeur Web & IA",
-    statut: "Étudiant MPCI"
-};
-
-const donnesJSON = JSON.stringify(profilRawane);
-console.log("Texte JSON :", donnesJSON);
-
-const objetConverti = JSON.parse(donnesJSON);
-console.log("Objet JS reconverti :", objetConverti.nom);
